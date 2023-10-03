@@ -2,7 +2,7 @@ const { emit } = require("../models/User");
 const mailsender= require("../utils/MailSender")
 exports.contactusMail=async (req,res)=>{
 
-    console.log("controller")
+    // console.log("controller")
     try {
         const {firstname,lastname,Email,Phone,message,code}=req.body;
         await mailsender("sp8982089@gmail.com", `${firstname} ${lastname} has send message to you `,message+"call-"+Phone);

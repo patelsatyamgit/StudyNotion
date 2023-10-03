@@ -16,7 +16,7 @@ exports.createCategory= async (req,res)=>{
             name:name,
             description:description,
         });
-        console.log(categoryDetails);
+        // console.log(categoryDetails);
 
         // return response 
 
@@ -44,7 +44,7 @@ exports.showAllCategory= async (req,res) =>{
         })
         
     } catch (error) {
-        console.log(error)
+        // console.log(error)
         return res.status(500).json({
             success:false,
             message:"error in finding categories",

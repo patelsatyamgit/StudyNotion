@@ -44,7 +44,7 @@ exports.capturePayment= async(req,res)=>{
         total_amount +=course.price
         
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         return res.status(500).json({success:false,message:error.message})
 
     }
@@ -56,7 +56,7 @@ exports.capturePayment= async(req,res)=>{
      try {
         
         const paymentResponse= await instance.orders.create(options);
-        console.log("payment Instance Response",paymentResponse);
+        // console.log("payment Instance Response",paymentResponse);
 
         res.json({
             success:true,
@@ -64,7 +64,7 @@ exports.capturePayment= async(req,res)=>{
         })
      } catch (error) {
 
-        console.log(error);
+        // console.log(error);
         res.status(500).json({
             success:false,
             message:"Could not initiate order."
@@ -143,10 +143,10 @@ const enrollStudents=async(courses,userId,res)=>{
                 const emailResponse = await mailSender(enrolledStudent.email,
                     `Successfully Enrolled into ${enrolledStudent.courseName}`,courseEnrollmentEmail(enrolledStudent.courseName, `${enrolledStudent.firstName} ${enrolledStudent.lastName}`))
 
-                    console.log("Email sent Successfully : ",emailResponse.response)
+                    // console.log("Email sent Successfully : ",emailResponse.response)
             } catch (error) {
 
-                console.log(error);
+                // console.log(error);
                 return res.status(400).json({
                     success:false,
                     error:error.message
@@ -175,7 +175,7 @@ exports.sendPaymentSuccessEmail = async (req,res) =>{
             this.sendPaymentSuccessEmail(`${enrollStudents.firstName} ${enrollStudents.lastName}`,amount/100,orderId,paymentId)
         )
     } catch (error) {
-        console.log("error in sending mail", error)
+        // console.log("error in sending mail", error)
         return res
           .status(400)
           .json({ success: false, message: "Could not send email" })

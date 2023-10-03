@@ -63,7 +63,7 @@ exports.sendOTP=async (req,res)=>{
         // create databasa entry  
 
         const otpBody = await OTP.create(otpPayload);
-        console.log(otpBody);
+        // console.log(otpBody);
 
         //returen response 
 
@@ -133,7 +133,7 @@ exports.signUp =async (req,res)=>{
         // find most resent otp 
         const recentOtp =await OTP.find({email}).sort({createdAt:-1}).limit(1);
        
-        console.log(recentOtp,otp);
+        // console.log(recentOtp,otp);
     
         // validate OTP 
         if(recentOtp.length==0){
@@ -151,7 +151,7 @@ exports.signUp =async (req,res)=>{
             })
         }
         // password hashing 
-    console.log("passone")
+    // console.log("passone")
         const hashedPassword =await bcrypt.hash(password,10);
 
         // Create the user
@@ -189,7 +189,7 @@ exports.signUp =async (req,res)=>{
         
     } catch (error) {
 
-        console.error(error);
+        // console.error(error);
         return res.status(500).json({
             success:false,
             message:"There is some error in signup",

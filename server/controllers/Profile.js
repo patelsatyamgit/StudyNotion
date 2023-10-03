@@ -16,7 +16,7 @@ exports.updateProfile=async(req,res)=>{
 
         // validation 
 
-        console.log("userid",id);
+        // console.log("userid",id);
         if(!contactNumber || !gender || !id){
             return res.status(400).json({
                 success:false,
@@ -48,7 +48,7 @@ exports.updateProfile=async(req,res)=>{
         
     }
      catch (error) {
-        console.log(error)
+        // console.log(error)
         return res.status(500).json({
             success:false,
             message:"error in Profile created"
@@ -73,7 +73,7 @@ exports.updateAbout=async(req,res)=>{
         })
         
      } catch (error) {
-        console.log("error in about update")
+        // console.log("error in about update")
         return res.status(500).json({
             success:false,
             message:"error in about update"
@@ -106,7 +106,7 @@ exports.deleteAccount =async(req,res)=>{
 
         
     } catch (error) {
-        console.log(error)
+        // console.log(error)
         return res.status(201).json({
             success:false,
             message:"eror in user deleted "
@@ -124,7 +124,7 @@ exports.getUserDetails=async(req,res)=>{
         const userDetails=await user.findById(id).populate("additionalDetails").exec();
 
         // response 
-        console.log("userdetails",userDetails);
+        // console.log("userdetails",userDetails);
         return res.status(200).json({
             success:true,
             message:"User Data fetched successfully",
@@ -132,7 +132,7 @@ exports.getUserDetails=async(req,res)=>{
         })
         
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         return res.status(500).json({
             success:false,
             message:"User Data fetched error"
@@ -147,14 +147,14 @@ exports.updateProfilePicture =async (req,res)=>{
     try {
         const picture=req.files.displayPicture;
         const userid=req.user.id;
-        console.log("userid",userid);
+        // console.log("userid",userid);
         const image=await uploadFile(
             picture,
             process.env.FOLDER_NAME,
             1000,
             1000,
         )
-        console.log("image-url",image);
+        // console.log("image-url",image);
 
         const updatedProfile= await user.findByIdAndUpdate(
             {_id:userid},
@@ -166,7 +166,7 @@ exports.updateProfilePicture =async (req,res)=>{
                 data:updatedProfile,
             })
     } catch (error) {
-        console.log("error....",error)
+        // console.log("error....",error)
         return res.status(500).json({
             success:false,
             message:error.message,
@@ -222,7 +222,7 @@ exports.getEnrolledCourses=async (req,res)=>{
                   ) / multiplier
               }
          }
-         console.log("enroolldfdfd----",userDetails);
+        //  console.log("enroolldfdfd----",userDetails);
         if(!userDetails){
             return res.status(400).json({
                 success:false,

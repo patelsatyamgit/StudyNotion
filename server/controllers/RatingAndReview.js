@@ -51,7 +51,7 @@ exports.createRating= async(req,res)=>{
 
     await newcourse.save();
 
-    console.log("newCourse",newcourse);
+    // console.log("newCourse",newcourse);
     
     return res.status(200).json({
         success:true,
@@ -61,7 +61,7 @@ exports.createRating= async(req,res)=>{
  
 
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         return res.status(500).json({
             success:false,
             message:"there is some error in creating rating"
@@ -148,7 +148,7 @@ exports.getAllRatings=async (req,res)=>{
 
         
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         return res.status(500).json({
             success:false,
             message:"there is some error in getting rating",

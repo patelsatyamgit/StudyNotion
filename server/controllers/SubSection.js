@@ -108,7 +108,7 @@ exports.updateSubSection = async(req,res)=>{
             message:"updated subsection successfully"
         })
     } catch (error) {
-        console.log(error)
+        // console.log(error)
         return res.status(500).json({
             success:false,
             message:"error in updating subsection "
@@ -122,7 +122,7 @@ exports.updateSubSection = async(req,res)=>{
 exports.deleteSubSection = async(req,res)=>{
     try {
         // get item from body 
-        console.log("---------------------")
+        // console.log("---------------------")
         const {subsectionid,sectionID}=req.body;
 
 
@@ -137,7 +137,7 @@ exports.deleteSubSection = async(req,res)=>{
             }
         
         )
-        console.log("000000000000000000")
+        // console.log("000000000000000000")
         const updateSubsection =await SubSection.findByIdAndDelete({_id:subsectionid})
 
         if(!updateSubsection){

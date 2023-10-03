@@ -35,7 +35,7 @@ exports.createCourse = async (req, res) => {
         //check for instructor
         const userId = req.user.id;
         const instructorDetails = await User.findById(userId,{accountType:"Instructor"});
-        console.log("Instructor Details: " , instructorDetails);
+        // console.log("Instructor Details: " , instructorDetails);
         //TODO: Verify that userId and instructorDetails._id  are same or different ?
            
         if(!instructorDetails) {
@@ -57,8 +57,8 @@ exports.createCourse = async (req, res) => {
         //Upload Image to Cloudinary
         const thumbnailImage = await uploadFile(thumbnail, process.env.FOLDER_NAME);
 
-        console.log("image url",thumbnailImage);
-        console.log("categoryDetails",categoryDetails)
+        // console.log("image url",thumbnailImage);
+        // console.log("categoryDetails",categoryDetails)
         //create an entry for new Course
         const newCourse = await Course.create({
             courseName,
@@ -87,7 +87,7 @@ exports.createCourse = async (req, res) => {
 
 
         //update the category ka schema
-        console.log
+        // console.log
         await Category.findByIdAndUpdate(
             {_id:category},
             {
@@ -97,7 +97,7 @@ exports.createCourse = async (req, res) => {
             },
             {new:true}    
         ) 
-        console.log
+        // console.log
 
         //TODO: HW ^
 
@@ -110,7 +110,7 @@ exports.createCourse = async (req, res) => {
 
     }
     catch(error) {
-        console.error(error);
+        // console.error(error);
         return res.status(500).json({
             success:false,
             message:'Failed to create Course',
@@ -125,7 +125,7 @@ exports.editCourse= async (req,res)=>{
         const {courseId}= req.body;
         const updates =req.body;
 
-        console.log("updates ---------",updates)
+        // console.log("updates ---------",updates)
 
         const course=await Course.findById(courseId);
 
@@ -179,7 +179,7 @@ exports.editCourse= async (req,res)=>{
         
     } catch (error) {
 
-            console.error(error)
+            // console.error(error)
             res.status(500).json({
             success: false,
             message: "Internal server error",
@@ -193,7 +193,7 @@ exports.showAllCoursesOfTheInstructor= async(req,res)=>{
 
     try {
         const id= req.user.id
-        console.log("request--",id);
+        // console.log("request--",id);
         const allcourses= await  Course.find({instructor:(id),
         }).populate("category").populate({
             path:"courseContent",
@@ -208,7 +208,7 @@ exports.showAllCoursesOfTheInstructor= async(req,res)=>{
             data:allcourses,
         })
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         res.status(500).json({
             success:false,
             message:"Failed to retrieve instructor courses",
@@ -223,7 +223,7 @@ exports.showAllCoursesOfTheInstructor= async(req,res)=>{
 exports.deleteCourse = async (req,res)=>{
     try {
         const {courseId}=req.body;
-        console.log(courseId);
+        // console.log(courseId);
         const course=await Course.findById(courseId);
 
         if(!course){
@@ -261,7 +261,7 @@ exports.deleteCourse = async (req,res)=>{
 
     
     } catch (error) {
-        console.log("there is error in Course deletion",error);
+        // console.log("there is error in Course deletion",error);
         return res.status(500).json({
             success:false,
             message:error.message,
@@ -292,7 +292,7 @@ exports.showAllCourses = async (req, res) => {
 
     }
     catch(error) {
-        console.log(error);
+        // console.log(error);
         return res.status(500).json({
             success:false,
             message:'Cannot Fetch course data',
@@ -341,7 +341,7 @@ exports.getCourseDetails =async (req,res)=>{
         })
     } catch (error) {
 
-        console.log(error);
+        // console.log(error);
         return res.status(500).json({
             success:false,
             message:error.message,
@@ -443,7 +443,7 @@ exports.getInstructorDesboardDetails=async(req,res)=>{
 
         
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         return res.status(500).json({
             success:false,
             message:"There is some error in getting instructor details"

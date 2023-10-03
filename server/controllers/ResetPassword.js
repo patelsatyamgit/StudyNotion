@@ -46,7 +46,7 @@ exports.resetPasswordToken=async (req,res)=>{
     
    } catch (error) {
 
-      console.log(error);
+    //   console.log(error);
       return res.status(500).json({
         success:false,
         message:"Something went wrong while sending reset pwd mail"
@@ -86,10 +86,10 @@ exports.resetPassword = async (req,res)=>{
              message:"Token is expired ,plese regenerate your token"
          })
      }
-     console.log("Pass 1");
+    //  console.log("Pass 1");
      // hash password 
      const hashedPassword =await bcrypt.hash(password,10);
-     console.log("Pass 2");
+    //  console.log("Pass 2");
      // update password 
      await User.findOneAndUpdate({token:token},
         {password:hashedPassword},
@@ -102,7 +102,7 @@ exports.resetPassword = async (req,res)=>{
     
    } catch (error) {
 
-    console.log(error)
+    // console.log(error)
     return res.json({
         success:false,
         message:"There is something error in reset password"

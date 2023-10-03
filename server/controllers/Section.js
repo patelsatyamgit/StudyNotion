@@ -38,7 +38,7 @@ exports.createSection =async (req,res)=>{
             },
         })
         .exec();
-        console.log("pass");
+        // console.log("pass");
 
         // HW how to populate section and subsection for updatedCourseDetails so that we can print all the details
         return res.status(200).json({
@@ -48,7 +48,7 @@ exports.createSection =async (req,res)=>{
         })
         
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         return res.status(500).json({
             success:false,
             message:"Unable to create a section ",
@@ -87,7 +87,7 @@ exports.updateSection=async (req,res)=>{
             updatedCourse:updatedcourse,
         })
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         return res.status(500).json({
             success:false,
             message:"Unable to update a section ",
@@ -125,7 +125,7 @@ exports.deteteSection=async (req,res)=>{
         })
         
     } catch (error) {
-        console.error("Error deleting section:", error);
+        // console.error("Error deleting section:", error);
         return res.status(500).json({
             success:false,
             message:"Unable to delete a section ",
