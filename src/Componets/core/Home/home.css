@@ -1,0 +1,45 @@
+
+.gggradiant{
+background: linear-gradient(141deg, rgba(14, 26, 45, 0.24) 0%, rgba(17, 30, 50, 0.38) 100%);
+backdrop-filter: blur(26px);
+}
+.g1blur{
+     border-radius: 372.949px;
+     opacity: 0.2;
+     background: var(--gradient-02, linear-gradient(144deg, #8A2BE2 0%, #FFA500 50%, #F8F8FF 100%));
+     filter: blur(20px);
+     position: absolute;
+     width: 80%;
+     height: 80%;
+     -webkit-filter: blur(20px);
+     top:-33px;
+     left: -63px;
+}
+.g2blur{
+    border-radius: 372.949px;
+     opacity: 0.2;
+     position: absolute;
+     width: 80%;
+     height: 80%;
+background: var(--gradient-05, linear-gradient(138deg, #1FA2FF 0%, #12D8FA 50%, #A6FFCB 100%));
+filter: blur(34px);
+top:-33px;
+     left: -63px;
+}
+.g3blur{
+     border-radius: 372.949px;
+     opacity: 0.2;
+     position: absolute;
+     transform: rotate(13deg);
+     width: 135%;
+     height: 80%;
+     background: var(--gradient-05, linear-gradient(138deg, #2094e7 0%, #12D8FA 50%, #A6FFCB 100%));
+     filter: blur(11px);
+     top:33px;
+     left: -83px;
+     -webkit-filter: blur(31px);
+     -webkit-transform: rotate(13deg);
+     -moz-transform: rotate(13deg);
+     -ms-transform: rotate(13deg);
+     -o-transform: rotate(13deg);
+}
