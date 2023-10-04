@@ -46,10 +46,10 @@ cloudinaryConnect()
 
 // routes 
 
-app.use("/api/v1/auth",userRoutes);
-app.use("/api/v1/profile",profileRoutes);
-app.use("/api/v1/course",courseRoutes);
-app.use("/api/v1/payment",paymentRoutes);
+app.use("/auth",userRoutes);
+app.use("/profile",profileRoutes);
+app.use("/course",courseRoutes);
+app.use("/payment",paymentRoutes);
 
 app.listen(PORT,()=>{
     console.log(`app is running at ${PORT}`)
