@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { toast } from 'react-hot-toast';
 import { apiConnector } from '../services/apiconnector';
 import { categories } from '../services/apis';
-import {Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { getcategoryDetails } from '../services/operations/catalogCategoryDetails';
 import Footeger from "../common/Footeger"
 import CourseSlider from '../Componets/core/Home/CourseSlider';
@@ -30,7 +30,7 @@ const CatalogCoursesPage = () => {
     fetchCategy();
   },[categoryName])
   useEffect(()=>{
-    const selected=categoYA.filter((cate)=>cate.name==categoryName.replace("-"," "));
+    const selected=categoYA.filter((cate)=>cate.name===categoryName.replace("-"," "));
 
     setSelectedCategory(selected[0]);
     setcategoryId(selectedCategory && selectedCategory._id);

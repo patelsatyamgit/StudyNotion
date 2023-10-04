@@ -3,7 +3,7 @@ import { paymentEnpoints } from "../apis";
 import { apiConnector } from "../apiconnector";
 import rzpimage from "../../assets/Logo/Logo-Full-Dark.png"
 import { setpaymentloading } from "../../slices/corse";
-import { removeFromCart, resetCart } from "../../slices/cartSlice";
+import { removeFromCart } from "../../slices/cartSlice";
 const {CREATEORDERAPI_URL,PAYMENTSUCCESSEMAIL_URL,VARIFYPAMENTAPI_URL}=paymentEnpoints;
 
 function loadScript(src) {
@@ -54,7 +54,7 @@ export async function BuyCourse(token,courses,user_details,navigate,dispatch){
               },
               handler: function (response) {
                 // console.log("hellow",response);
-                // sendPaymentSuccessEmail(response, orderResponse.data.data.amount, token)
+                sendPaymentSuccessEmail(response, orderResponse.data.data.amount, token)
                 verifyPayment({ ...response, courses }, token, navigate, dispatch)
               },
         }
@@ -94,6 +94,7 @@ async function verifyPayment(bodyData, token, navigate, dispatch) {
       navigate("/dashboard/enrolled-courses")
       bodyData.courses.map((item)=>{
         dispatch(removeFromCart(item))
+          return;
       })
       
     } catch (error) {

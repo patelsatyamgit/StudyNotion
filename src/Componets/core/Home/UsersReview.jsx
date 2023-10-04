@@ -59,7 +59,7 @@ breakpoints={{
             <SwiperSlide key={index}>
                 <div className='bg-richblack-800 rounded-sm py-4 px-4'>
                     <div className='flex gap-5 '>
-                        <img src={item?.user?.image ? item?.user?.image :`https://api.dicebear.com/5.x/initials/svg?seed=${item?.user?.firstName} ${item?.user?.lastName}`} className='w-[60px] h-[60px] rounded-full'/>
+                        <img alt='okk' src={item?.user?.image ? item?.user?.image :`https://api.dicebear.com/5.x/initials/svg?seed=${item?.user?.firstName} ${item?.user?.lastName}`} className='w-[60px] h-[60px] rounded-full'/>
                         <div className='felx flex-col justify-start items-start'>
                         <h4 className='text-richblack-25 font-bold text-xl text-start'>{item?.user?.firstName}</h4>
                         <p>{item?.course?.courseName}</p>

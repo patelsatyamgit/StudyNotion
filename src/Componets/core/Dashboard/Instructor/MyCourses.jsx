@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {AiOutlineDelete, AiOutlineEdit, AiOutlinePlus} from "react-icons/ai"
-import {useNavigate, Navigate } from 'react-router-dom'
-import { deleteSection, deletecourse, getInstructorCourses } from '../../../../services/operations/course';
+import {useNavigate } from 'react-router-dom'
+import {  deletecourse, getInstructorCourses } from '../../../../services/operations/course';
 import { useDispatch, useSelector } from 'react-redux';
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
 import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css"
@@ -91,7 +91,7 @@ const MyCourses = () => {
 
                                                 <p >
                                                 {
-                                                    course?.status=="Draft" ? (
+                                                    course?.status==="Draft" ? (
                                                           <p className='px-1  rounded-lg bg-richblack-500 text-yellow-5 flex gap-1 w-fit items-center mt-5'>
                                                              <BiTime/>
                                                              Drafted

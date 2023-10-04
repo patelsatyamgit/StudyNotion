@@ -21,7 +21,7 @@ const CourseInfo = () => {
     const {CATEGORIES_API}=categories;
     const [loading,setloading]=useState(false);
     const {token} =useSelector((state)=>state.auth);
-    const [defCategory,setDefCategory]=useState(null);
+    // const [defCategory,setDefCategory]=useState(null);
     const {
         register,
         handleSubmit,

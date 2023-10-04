@@ -1,5 +1,5 @@
 import React from 'react'
-import HIghlightedText from '../Componets/core/Home/HIghlightedText';
+// import HIghlightedText from '../Componets/core/Home/HIghlightedText';
 import banner1 from "../assets/Images/aboutus1.webp"
 import banner2 from "../assets/Images/aboutus2.webp"
 import banner3 from "../assets/Images/aboutus3.webp"
@@ -23,9 +23,9 @@ import UsersReview from '../Componets/core/Home/UsersReview';
                 <p className='text-richblack-400 text-center font-inter text-sm'>Studynotion is at the forefront of driving innovation in online education. We're passionate about creating a brighter future by offering cutting-edge courses, leveraging emerging technologies, and nurturing a vibrant learning community.</p>
             </div>
             <div className='flex flex-wrap md:flex-row gap-4 md:mt-4  md:absolute justify-center  md:-bottom-24'>
-                <img className='h-[250px]' src={banner1}/>
-                <img className='h-[250px] shadowINs' src={banner2}/>
-                <img className='h-[250px]' src={banner3}/>
+                <img alt='ok' className='h-[250px]' src={banner1}/>
+                <img  alt='ok' className='h-[250px] shadowINs' src={banner2}/>
+                <img alt='0k' className='h-[250px]' src={banner3}/>
             </div>
 
         </section>

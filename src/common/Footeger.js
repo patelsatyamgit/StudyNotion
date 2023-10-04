@@ -1,18 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import logo from "../assets/Logo/Logo-Full-Light.png"
 import { FooterLink1,FooterLink2 } from '../data/footer-links'
 import { BsHeart } from 'react-icons/bs'
 import { BiCopyright } from 'react-icons/bi'
-import { useSelector } from 'react-redux'
-import { useLocation } from 'react-router-dom'
+// import { useSelector } from 'react-redux'
+// import { useLocation } from 'react-router-dom'
 const Footeger = () => {
  
   return (
     <div className='mt-10 '>
             <div className='  flex flex-wrap  justify-center gap-9 relative'>
             <div className='flex flex-col gap-4'>
-                <img className='w-[150px]' src={logo} />
+                <img alt='demo' className='w-[150px]' src={logo} />
                 <div className='flex flex-col gap-3'>
                     <h2 className='text-pure-greys-100 font-bold font-inter'>{FooterLink1[0].title}</h2>
                     {

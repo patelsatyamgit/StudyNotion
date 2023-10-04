@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { sidebarLinks } from '../../../data/dashboard-links';
 import SidebarLink from './SidebarLink';
-import { useSelector,useDispatch} from 'react-redux';
+import { useSelector} from 'react-redux';
 import {TbLogout2} from "react-icons/tb"
 
 const Sidebar = ({modleOpen}) => {

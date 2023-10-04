@@ -1,5 +1,4 @@
 import { toast } from "react-hot-toast";
-import { setLoading } from "../../slices/authSlice";
 import {apiConnector}  from "../apiconnector";
 import { updateProfile } from "../apis";
 import { setUser } from "../../slices/profileSlice";
@@ -168,7 +167,7 @@ export function uploadProfile(formdata,token){
       const id=toast.loading("delete your profile...");
       try {
         
-        const response=apiConnector("DELETE",DELETEPROFILE_URL,null,{
+        apiConnector("DELETE",DELETEPROFILE_URL,null,{
           Authorization: `Bearer ${token}`,
           
         })

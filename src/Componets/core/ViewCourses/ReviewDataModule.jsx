@@ -24,7 +24,7 @@ import { createRating } from '../../../services/operations/course';
                  setValue("rating",rating);
                  const Data=getValues();
                  try {
-                    const result=await createRating(Data,token)
+                    await createRating(Data,token)
                     setAddReview(false)
                  } catch (error) {
                     console.log(error);

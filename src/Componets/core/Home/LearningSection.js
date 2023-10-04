@@ -17,9 +17,9 @@ import Button from './Button';
       <div className='w-[96%
       ] mx-auto  mt-5'>
       <div className='flex flex-col md:flex-row justify-between items-center  relative px-1  w-full'>
-       a <img src={learn1} alt='learn 1 image' className='w-[300px] relative'/>
-        <img src={learn2} alt='learn 2 image' className='w-[300px]  '/>
-        <img src={learn3} alt='learn 3 image' className='w-[300px]  '/>
+       a <img src={learn1} alt='learn1 image' className='w-[300px] relative'/>
+        <img src={learn2} alt='learn2 image' className='w-[300px]  '/>
+        <img src={learn3} alt='learn3 image' className='w-[300px]  '/>
             
         </div>
         <div className='items-center flex justify-center mt-3 mb-7'>

@@ -3,7 +3,7 @@ import logo from "../assets/Logo/Logo-Full-Light.png"
 import { NavbarLinks } from '../data/navbar-links'
 import { Link } from 'react-router-dom'
 import {FiChevronDown} from "react-icons/fi"
-import {BiSolidUserCircle,BiSolidCartAdd,BiSearch} from "react-icons/bi";
+import {BiSolidCartAdd} from "react-icons/bi";
 import {GiHamburgerMenu} from "react-icons/gi"
 import { useSelector } from 'react-redux'
 

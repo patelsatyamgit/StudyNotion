@@ -13,7 +13,7 @@ const EditInfo = () => {
                     const {countrycode,contactNumber}=data;
                     
                         const codee=countrycode.split(" ");
-                         const newPhone=codee[0]+"-"+contactNumber;;
+                        //  const newPhone=codee[0]+"-"+contactNumber;;
 
             
                     dispatch(updateInfo(data,token,user)).then((result) => {

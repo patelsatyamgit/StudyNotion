@@ -90,7 +90,7 @@ export const createSection=async (data,token)=>{
 }
 
 export const editCourseDetails=async(formData,token)=>{
-    const {CREATECOURSE_URL}=courseEndpoint;
+    // const {CREATECOURSE_URL}=courseEndpoint;
     let result=null;
     const id=toast.loading("uploadding....");
         try {
@@ -138,7 +138,6 @@ export const getInstructorCourses = async(token)=>{
           {
              toast.dismiss(id);
              throw new Error("could not get INstructor  courses")
-             return;
           }
           result=response.data.data;
           toast.success("ok")

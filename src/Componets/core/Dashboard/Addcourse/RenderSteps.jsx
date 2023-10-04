@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import {AiFillCheckCircle} from "react-icons/ai"
-import { setStep } from '../../../../slices/corse'
+// import { setStep } from '../../../../slices/corse'
 import { useDispatch } from 'react-redux'
 import Publish from './infoprocess/Publish'
 import CourseInfo from './infoprocess/CourseInfo'
@@ -21,7 +21,7 @@ const RenderSteps = () => {
         }
             
         ]
-        const dispatch=useDispatch();
+        // const dispatch=useDispatch();
         // dispatch(setStep(1));
         
 
@@ -57,7 +57,7 @@ const RenderSteps = () => {
         <div className='flex justify-between '>
             {
                 steps.map((item2,index)=>{
-                    return <div key={index} className={`${step==item2.step?"text-richblack-5":""} font-inter ${step<steps.length?"w-[100%/2] text-center":""} text-richblack-200  text-sm md:text-xl`}>
+                    return <div key={index} className={`${step===item2.step?"text-richblack-5":""} font-inter ${step<steps.length?"w-[100%/2] text-center":""} text-richblack-200  text-sm md:text-xl`}>
                         {item2.title}
                     </div>
                 })

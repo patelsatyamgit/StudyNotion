@@ -8,10 +8,10 @@ import { setLoading } from '../../../../../slices/authSlice';
 import { updateSection } from '../../../../../services/operations/course';
 import { createSection } from '../../../../../services/operations/course';
 import NestedView from '../NestedView';
-import { set } from 'mongoose';
+// import { set } from 'mongoose';
 import { toast } from 'react-hot-toast';
 const CourseBuilder = () => {
-   const {register,handleSubmit,getValues,setValue,formState:{errors}}=useForm();
+   const {register,handleSubmit,setValue,formState:{errors}}=useForm();
 
 
    const dispatch=useDispatch();

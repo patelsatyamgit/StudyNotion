@@ -5,8 +5,8 @@ import {apiConnector}  from "../apiconnector";
 import { setToken } from "../../slices/authSlice";
 import {setUser} from "../../slices/profileSlice"
 import { resetCart } from "../../slices/cartSlice";
-import ResetPasswordToken from "../../Pages/ResetPasswordToken";
-import { updateProfile } from "../apis";
+// import ResetPasswordToken from "../../Pages/ResetPasswordToken";
+// import { updateProfile } from "../apis";
 import {contact} from "../apis"
 
 
@@ -36,7 +36,7 @@ export function sendOtp(email,navigate){
             navigate("/verify-email");
         } catch (error) {
             // console.log("SENDOTP API ERROR......",error);
-            if(error.response.status == 409){
+            if(error.response.status === 409){
               toast.success("User already register please login");
             
               navigate("/login")}

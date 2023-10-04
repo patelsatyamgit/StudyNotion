@@ -20,7 +20,7 @@ const [currentcourse,setcurrentcourse]=useState(HomePageExplore[0].courses[0]);
                 {
                     HomePageExplore
                     .map((value, index) => {
-                        return <button className={`text-pure-greys-300 px-3 py-[3px] rounded-md md:text-sm text-[10px] ${currentTag==value.tag?"bg-richblack-900":""} hover:text-pure-greys-50 cursor-pointer hover:bg-richblack-800`} key={index} onClick={(event)=>{
+                        return <button className={`text-pure-greys-300 px-3 py-[3px] rounded-md md:text-sm text-[10px] ${currentTag===value.tag?"bg-richblack-900":""} hover:text-pure-greys-50 cursor-pointer hover:bg-richblack-800`} key={index} onClick={(event)=>{
                             SetcurrentTag(value.tag);
                             setcourses(value.courses);
                         }}>

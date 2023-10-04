@@ -23,7 +23,7 @@ const CoursePurchasepage = () => {
     const {token} =useSelector((state)=>state.auth);
     const dispatch=useDispatch();
     const[state,setStateflag]=useState(false);
-    const location=useLocation();
+    // const location=useLocation();
     const navigate=useNavigate();
     const [averageRating,setAverageRating]=useState(0);
     const [confirstmationModule,setConfirmation]=useState(null);
@@ -115,7 +115,7 @@ const CoursePurchasepage = () => {
                 <CopyToClipboard text={window.location.href}
                  onCopy={() => {
                     setStateflag(true)
-                    const myTimeout = setTimeout(myGreeting, 2000);
+                    // const myTimeout = setTimeout(myGreeting, 2000);
 
                 function myGreeting() {
                         setStateflag(false)

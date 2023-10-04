@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { MdEdit } from 'react-icons/md';
 import { useSelector } from 'react-redux';
 import {RxDropdownMenu} from "react-icons/rx"
@@ -34,18 +34,18 @@ const NestedView = ({handlechangeEditSectionName}) => {
              setloading(false);
              setConfirmationModule(null);
     }
-    const addLectureHandler=(e)=>{
-        e.preventDefault();
+    // const addLectureHandler=(e)=>{
+    //     e.preventDefault();
 
 
-    }
+    // }
     const handleDeletesubSection=async(id,sectionId)=>{
         setloading(true);
 
         try {
             const result=await deleteSubsection({subsectionid:id,sectionID:sectionId},token);
             if(result){
-                const updatedContent=course.courseContent.map((section)=> section._id == sectionId ? result:section);
+                const updatedContent=course.courseContent.map((section)=> section._id === sectionId ? result:section);
                 const updatedCourse={...course,courseContent:updatedContent};
 
                 dispatch(setCourse(updatedCourse));

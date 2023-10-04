@@ -20,7 +20,7 @@ const Upload = (
 ) => {
 
     const inputRef =useRef();
-    const {course}=useSelector((state)=>state.course);
+    // const {course}=useSelector((state)=>state.course);
     const[selectedfile,setSelectedFile]=useState(null);
     const[previewSourse,setpreviewSourse]=useState(viewData ? viewData : editData ? editData:"")
 

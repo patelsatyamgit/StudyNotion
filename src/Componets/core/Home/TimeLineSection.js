@@ -31,7 +31,7 @@ const TimeLineSection = () => {
             description:"Code your way to a solution"
         }
     ]
-    const count=0;
+    // const count=0;
   return (
     <div className='mt-3'>
         {/* section one  */}
@@ -55,7 +55,7 @@ const TimeLineSection = () => {
                         .map((element, index) => {
                             return <div key={index} className='flex  gap-8 items-center py-2'>
                                 <div className='relative'>
-                                    <img src={element.logo} />
+                                    <img alt='okk' src={element.logo} />
 
                                     
                                 </div>
@@ -73,7 +73,7 @@ const TimeLineSection = () => {
             {/* right  */}
             <div className='relative lg:w-[50%] px-10 '>
                 <div className='relative z-40'>
-                    <img src={TimelineImage}/>
+                    <img alt='okk' src={TimelineImage}/>
                     <div className='w-full h-full bg-white shadow-2xl  absolute -z-10 -bottom-4 -right-4 '>
                         <div className='g3blur'>
                             

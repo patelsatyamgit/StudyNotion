@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Player } from 'video-react';
 
-import { HiIdentification } from 'react-icons/hi';
+// import { HiIdentification } from 'react-icons/hi';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
-import Button from '../Home/Button';
+// import Button from '../Home/Button';
 import { updateCourseProgress } from '../../../services/operations/course';
 import { setActivesubsection, setCompletedLectures } from '../../../slices/viewCourseSlice';
 // import "node_modules/video-react/dist/video-react.css";

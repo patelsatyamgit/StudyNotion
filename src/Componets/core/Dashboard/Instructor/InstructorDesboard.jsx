@@ -1,5 +1,5 @@
 import React from 'react'
-import { getInstructorCourses, getInstructorDeskboard } from '../../../../services/operations/course'
+import {  getInstructorDeskboard } from '../../../../services/operations/course'
 import { useSelector } from 'react-redux'
 import { useEffect } from 'react';
 import { useState } from 'react';

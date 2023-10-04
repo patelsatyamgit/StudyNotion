@@ -7,7 +7,7 @@ export const InstructorSection = () => {
   return (
     <div className='flex flex-col md:flex-row mt-8 gap-2 items-center'>
         <div className='relative'>
-            <img src={INSTRUCTOR} className='relative z-40'/>
+            <img src={INSTRUCTOR} alt="oke" className='relative z-40'/>
             <div className='w-full h-full bg-white absolute -top-3 -left-3'>
                 
             </div>

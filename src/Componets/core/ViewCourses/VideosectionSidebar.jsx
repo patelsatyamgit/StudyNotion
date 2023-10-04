@@ -3,11 +3,11 @@ import React, { useState } from 'react'
 import { MdOutlineKeyboardArrowUp,  } from 'react-icons/md';
 import { FaBackward } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
-import { Navigate, useNavigate, useParams } from 'react-router-dom';
+import {  useNavigate, useParams } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { useEffect } from 'react';
-import { setActivesubsection, setTotalNoOfLectures } from '../../../slices/viewCourseSlice';
-import { AiOutlineDoubleLeft, AiOutlineDoubleRight } from 'react-icons/ai';
+import { setActivesubsection } from '../../../slices/viewCourseSlice';
+// import { AiOutlineDoubleLeft, AiOutlineDoubleRight } from 'react-icons/ai';
 
 
 

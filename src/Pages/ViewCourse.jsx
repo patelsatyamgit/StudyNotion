@@ -1,5 +1,5 @@
 import React from 'react'
-import { Outlet, useParams, useSearchParams } from "react-router-dom"
+import { Outlet, useParams } from "react-router-dom"
 
 import VideosectionSidebar from "../Componets/core/ViewCourses/VideosectionSidebar"
 import { useEffect } from 'react'
@@ -8,7 +8,7 @@ import { getcourseAllDetails } from '../services/operations/course'
 import { useDispatch, useSelector } from 'react-redux'
 import { AiOutlineDoubleLeft, AiOutlineDoubleRight } from 'react-icons/ai';
 
-import { setCourseEntireData,setCompletedLectures,setCourseSectionData,setTotalNoOfLectures, updateCompleteLectures } from '../slices/viewCourseSlice'
+import { setCourseEntireData,setCompletedLectures,setCourseSectionData,setTotalNoOfLectures } from '../slices/viewCourseSlice'
 import ReviewDataModule from '../Componets/core/ViewCourses/ReviewDataModule'
 
 const ViewCourse = () => {
@@ -16,7 +16,7 @@ const ViewCourse = () => {
     const [activeSidesection,setactiveSidesection]=useState(false);
      const [Review,setAddReview]=useState(false);
     const [loading,setloading]=useState(false);
-    const {courseId,sectionId,subsectionId}=useParams();
+    const {courseId}=useParams();
     const {token}=useSelector((state)=>state.auth);
      const {completedLectures,courseSectionData}=useSelector((state)=>state.viewCourse)
     const dispatch =useDispatch();
