@@ -1,7 +1,7 @@
 const User=require("../models/User");
 const OTP=require("../models/Otp");
 const otpGenerator =require("otp-generator");
-const bcrypt =require("bcrypt");
+const bcrypt =require("bcryptjs");
 const Profile = require("../models/Profile");
 const mailsender=require("../utils/MailSender");
 const {passwordUpdated}=require("../mai/ltemplates/passwordUpdate");
