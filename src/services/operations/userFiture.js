@@ -54,7 +54,7 @@ export async function BuyCourse(token,courses,user_details,navigate,dispatch){
               },
               handler: function (response) {
                 // console.log("hellow",response);
-                sendPaymentSuccessEmail(response, orderResponse.data.data.amount, token)
+                // sendPaymentSuccessEmail(response, orderResponse.data.data.amount, token)
                 verifyPayment({ ...response, courses }, token, navigate, dispatch)
               },
         }
