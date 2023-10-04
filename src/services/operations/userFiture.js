@@ -105,23 +105,23 @@ async function verifyPayment(bodyData, token, navigate, dispatch) {
     dispatch(setpaymentloading(false))
   }
   
-async function sendPaymentSuccessEmail(response, amount, token) {
-    try {
+// async function sendPaymentSuccessEmail(response, amount, token) {
+//     try {
 
-        //  console.log("response-----",response);
-      await apiConnector(
-        "POST",
-        PAYMENTSUCCESSEMAIL_URL,
-        {
-          orderId: response.razorpay_order_id,
-          paymentId: response.razorpay_payment_id,
-          amount,
-        },
-        {
-          Authorization: `Bearer ${token}`,
-        }
-      )
-    } catch (error) {
-      console.log("PAYMENT SUCCESS EMAIL ERROR............", error)
-    }
-  }
+//         //  console.log("response-----",response);
+//       await apiConnector(
+//         "POST",
+//         PAYMENTSUCCESSEMAIL_URL,
+//         {
+//           orderId: response.razorpay_order_id,
+//           paymentId: response.razorpay_payment_id,
+//           amount,
+//         },
+//         {
+//           Authorization: `Bearer ${token}`,
+//         }
+//       )
+//     } catch (error) {
+//       console.log("PAYMENT SUCCESS EMAIL ERROR............", error)
+//     }
+//   }
