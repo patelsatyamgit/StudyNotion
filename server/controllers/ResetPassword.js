@@ -31,7 +31,9 @@ exports.resetPasswordToken=async (req,res)=>{
      resetPasswordExpires:Date.now() +  3600000},{new:true});
  
      // create url
-     const url =`*/update-password/${token}`
+     const url =`https://finalstudynotion.onrender.com
+
+/update-password/${token}`
  
      // send mail containing url
      await mailSender(email,"Password Reset Mail", `Password Reset Link: ${url}`) ;
