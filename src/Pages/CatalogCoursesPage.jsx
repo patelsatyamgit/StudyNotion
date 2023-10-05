@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react'
 import { toast } from 'react-hot-toast';
 import { apiConnector } from '../services/apiconnector';
 import { categories } from '../services/apis';
-import { useParams } from 'react-router-dom';
+import { useParams,useLocation } from 'react-router-dom';
 import { getcategoryDetails } from '../services/operations/catalogCategoryDetails';
 import Footeger from "../common/Footeger"
 import CourseSlider from '../Componets/core/Home/CourseSlider';
 import CourseCard  from '../Componets/core/Home/CatalogCourseCard';
 const CatalogCoursesPage = () => {
   const [categoYA,setcategories]=useState([]);
+  const location=useLocation();
   const [selectedCategory,setSelectedCategory]=useState(null);
   const [categoryIdv,setcategoryId]=useState(null);
   const {categoryName}=useParams();
@@ -28,13 +29,11 @@ const CatalogCoursesPage = () => {
   }
   useEffect(()=>{
     fetchCategy();
-  },[categoryName])
-  useEffect(()=>{
     const selected=categoYA.filter((cate)=>cate.name===categoryName.replace("-"," "));
 
     setSelectedCategory(selected[0]);
     setcategoryId(selectedCategory && selectedCategory._id);
-  },[categoryName,categoYA])
+  },[,categoryName,categoYA,location.pathName])
 
   useEffect(()=>{
        
@@ -60,7 +59,7 @@ const CatalogCoursesPage = () => {
     }
     
  
-  },[categoryIdv,categoryName])
+  },[,categoryIdv,categoryName,location.pathName])
   
   return (
     <div className='w-full min-h-screen bg-richblack-900 text-black pt-[10vh]'>
