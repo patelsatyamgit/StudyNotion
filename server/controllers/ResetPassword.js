@@ -31,7 +31,7 @@ exports.resetPasswordToken=async (req,res)=>{
      resetPasswordExpires:Date.now() +  3600000},{new:true});
  
      // create url
-     const url =`http://localhost:3000/update-password/${token}`
+     const url =`*/update-password/${token}`
  
      // send mail containing url
      await mailSender(email,"Password Reset Mail", `Password Reset Link: ${url}`) ;
