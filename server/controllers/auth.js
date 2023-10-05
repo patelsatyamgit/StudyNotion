@@ -227,7 +227,7 @@ exports.login =async (req,res)=>{
 
         if(await bcrypt.compare(password,user.password)){
 
-            console.log("inside logint")
+            // console.log("inside logint")
             const payload ={
                 email:user.email,
                 id:user._id,
@@ -318,7 +318,7 @@ exports.changePassword =async (req,res)=>{
                 passwordUpdated(updatedUserDetails.email,
                     `Password updated successfully for ${updatedUserDetails.firstName} ${userDetails.lastName}`));
 
-                    console.log("Email Sent successfully",emailResponse.response);
+                    // console.log("Email Sent successfully",emailResponse.response);
         } catch (error) {
             console.error("Error occurred while sending email:", error);
 			return res.status(500).json({
