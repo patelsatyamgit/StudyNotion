@@ -26,7 +26,7 @@ import {ImCross} from "react-icons/im"
     const fetchSublinks= async()=>{
         try {
             const result=await apiConnector("GET",CATEGORIES_API);
-            console.log("Printing sublinks results:",result.data.data);
+            // console.log("Printing sublinks results:",result.data.data);
             setSubLink(result.data.data);
 
         } catch (error) {
