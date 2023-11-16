@@ -14,6 +14,7 @@ import { TbCarTurbine } from 'react-icons/tb'
 import {ImCross} from "react-icons/im"
 
  const Navbar = () => {
+     const dispatch=useDispatch();
     const {token}=useSelector((state)=> state.auth)
     const {user}=useSelector((state)=> state.profile);
     const {total}=useSelector((state)=> state.cart);
@@ -24,6 +25,8 @@ import {ImCross} from "react-icons/im"
     const [activeHamberger,setactiveHamberger]=useState(false);
   
     const fetchSublinks= async()=>{
+      
+        dispatch(setLoading(true));
         try {
             const result=await apiConnector("GET",CATEGORIES_API);
             // console.log("Printing sublinks results:",result.data.data);
@@ -32,6 +35,7 @@ import {ImCross} from "react-icons/im"
         } catch (error) {
             console.log("Could not fetch the Category list",error);
         }
+        dispatch(setLoading(false));
     }
     useEffect(()=>{
         fetchSublinks();
