@@ -38,12 +38,7 @@ function App() {
 
     const timenow=Date.now();
     // console.log(localStorage);
-    if( timeout !== 0  && timenow > timeout){
-      // dispatch()
-            dispatch(logout(navigate));
-      
-    }
-  },[,token,timeout])
+ 
   return (
    <div className="relative">
     <Navbar/>
