@@ -40,6 +40,7 @@ function Homepage() {
     useEffect(()=>{
         reviews();
     },[])
+   const {loading}=useSelector((state)=>state.auth);
     const getEffectiveReview=(arr)=>{
                 const temp=arr.split(" ");
                 const len=temp.length;
@@ -51,7 +52,7 @@ function Homepage() {
                 }
     }
   return (
-    <div className="w-full  min-h-screen bg-richblack-900 relative overflow-x-hidden pt-[10vh]">
+      !loading ? <div className="w-full  min-h-screen bg-richblack-900 relative overflow-x-hidden pt-[10vh]">
         {/* part one  */}
        
         <div className='w-[90%] lg:w-4/5 mx-auto mt-10 relative'>
@@ -245,6 +246,8 @@ codebloc={'<!DOCTYPE html>\n<html>\nhead><title>Example</ \ntitle><linkerel="sty
         </div>
        
        
+    </div> : <div>
+        ok
     </div>
   )
 }
