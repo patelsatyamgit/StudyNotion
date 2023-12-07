@@ -42,7 +42,7 @@ export async function BuyCourse(token,courses,user_details,navigate,dispatch){
   // process.env.RAZORPAY_KEY
         console.log("okkkk",orderResponse.data.data.order,process.env.RAZORPAY_KEY);
         const options={
-            key: process.env.RAZORPAY_KEY,
+            key: "rzp_test_3dLkd14HS9Sa84",
             currency: orderResponse.data.data.currency,
             amount:`${orderResponse.data.data.amount}`,
             order_id:orderResponse.data.data.id,
