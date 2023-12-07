@@ -44,7 +44,7 @@ exports.capturePayment= async(req,res)=>{
         total_amount +=course.price
         
     } catch (error) {
-        // console.log(error);
+        console.log(error);
         return res.status(500).json({success:false,message:error.message})
 
     }
@@ -64,7 +64,7 @@ exports.capturePayment= async(req,res)=>{
         })
      } catch (error) {
 
-        // console.log(error);
+        console.log(error);
         res.status(500).json({
             success:false,
             message:"Could not initiate order."
