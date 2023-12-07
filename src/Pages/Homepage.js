@@ -22,7 +22,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import "../App.css";
 import UsersReview from '../Componets/core/Home/UsersReview';
-import { useDispatch } from 'react-redux';
+import { useDispatch,useSelector } from 'react-redux';
 import { setreviews } from '../slices/cartSlice';
 
 function Homepage() {
