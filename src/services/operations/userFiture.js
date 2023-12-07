@@ -40,12 +40,12 @@ export async function BuyCourse(token,courses,user_details,navigate,dispatch){
 
         // console.log("PAYMENT RESPONSE FROM BACKEND.......",orderResponse);
   // process.env.RAZORPAY_KEY
-
+        console.log("okkkk",orderResponse.data.data.order,process.env.RAZORPAY_KEY);
         const options={
             key: process.env.RAZORPAY_KEY,
             currency: orderResponse.data.data.currency,
             amount:`${orderResponse.data.data.amount}`,
-            order_id:"order_N9SpsmqLNH8z4r",
+            order_id:orderResponse.data.data.id,
             name:"StudyNotion",
             description:"Thank you for Purchasing the Course.",
             image:rzpimage,
