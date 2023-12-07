@@ -6,6 +6,7 @@ import {FiChevronDown} from "react-icons/fi"
 import {BiSolidCartAdd} from "react-icons/bi";
 import {GiHamburgerMenu} from "react-icons/gi"
 import { useSelector,useDispatch } from 'react-redux'
+import { setLoading } from '../slices/authSlice'
 
 import ProfileDropDown from '../Componets/core/Auth/ProfileDropDown'
     import {apiConnector} from '../services/apiconnector'
