@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import {FiChevronDown} from "react-icons/fi"
 import {BiSolidCartAdd} from "react-icons/bi";
 import {GiHamburgerMenu} from "react-icons/gi"
-import { useSelector } from 'react-redux'
+import { useSelector,useDispatch } from 'react-redux'
 
 import ProfileDropDown from '../Componets/core/Auth/ProfileDropDown'
     import {apiConnector} from '../services/apiconnector'
@@ -38,7 +38,7 @@ import {ImCross} from "react-icons/im"
         dispatch(setLoading(false));
     }
     useEffect(()=>{
-        fetchSublinks();
+        fetchSublinks();  
     },[])
    
   return (
