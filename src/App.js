@@ -38,7 +38,7 @@ function App() {
 
     const timenow=Date.now();
     // console.log(localStorage);
- 
+  })
   return (
    <div className="relative">
     <Navbar/>
@@ -128,8 +128,6 @@ function App() {
     
    </div>
   );
-})
-
 }
 
 export default App;
